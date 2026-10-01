@@ -156,7 +156,7 @@ function SobreGales() {
         <div className="mx-auto max-w-[1300px]">
           <SectionHeading eyebrow="Editorial" title="Instantes de escena" />
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[images.galEscenario, images.closeupHands, images.galPublico, images.expTeatros].map(
+            {[images.instante1, images.instante2, images.instante3, images.instante4].map(
               (src, i) => (
                 <Reveal key={src} delay={i * 0.06}>
                   <div className="overflow-hidden border border-border">

@@ -1,29 +1,46 @@
 import heroGalesAsset from "@/assets/hero-gales.png.asset.json";
-import aboutGalesAsset from "@/assets/gales-about.png.asset.json";
-import expEmpresas from "@/assets/exp-empresas.jpg";
-import expPrivados from "@/assets/exp-privados.jpg";
-import expTeatros from "@/assets/exp-teatros.jpg";
+import imagen1 from "@/assets/imagen_1.jpeg";
+import imagen2 from "@/assets/imagen_2.jpeg";
+import imagen3 from "@/assets/imagen_3.jpeg";
+import imagen4 from "@/assets/imagen_4.jpeg";
+import imagen6 from "@/assets/imagen_6.jpeg";
+import imagen7 from "@/assets/imagen_7.jpeg";
+import imagen8 from "@/assets/imagen_8.jpeg";
+import imagen9 from "@/assets/imagen_9.jpeg";
+import imagen10 from "@/assets/imagen_10.jpeg";
+import imagen11 from "@/assets/imagen_11.jpeg";
+import imagen12 from "@/assets/imagen_12.jpeg";
+import imagen13 from "@/assets/imagen_13.jpeg";
+import imagen14 from "@/assets/imagen_14.jpeg";
+import imagen15 from "@/assets/imagen_15.jpeg";
+import imagen16 from "@/assets/imagen_16.jpeg";
+import imagen17 from "@/assets/imagen_17.jpeg";
+import imagen18 from "@/assets/imagen_18.jpeg";
+import imagen19 from "@/assets/imagen_19.jpeg";
+import imagen20 from "@/assets/imagen_20.jpeg";
+import imagen21 from "@/assets/imagen_21.jpeg";
+
+// Legacy imports - mantener para compatibilidad si es necesario
 import stageCta from "@/assets/stage-cta.jpg";
 import showreelCover from "@/assets/showreel-cover.jpg";
-import closeupHands from "@/assets/closeup-hands.jpg";
-import galPublico from "@/assets/gal-publico.jpg";
-import galEscenario from "@/assets/gal-escenario.jpg";
-import galBodas from "@/assets/gal-bodas.jpg";
-import galBackstage from "@/assets/gal-backstage.jpg";
 
 export const images = {
   heroGales: heroGalesAsset.url,
-  aboutGales: aboutGalesAsset.url,
-  expEmpresas,
-  expPrivados,
-  expTeatros,
-  stageCta,
-  showreelCover,
-  closeupHands,
-  galPublico,
-  galEscenario,
-  galBodas,
-  galBackstage,
+  aboutGales: imagen21,
+  expEmpresas: imagen7,
+  expPrivados: imagen2,
+  expTeatros: imagen6,
+  stageCta: stageCta,
+  showreelCover: showreelCover,
+  galPublico: imagen2,
+  galEscenario: imagen8,
+  galBodas: imagen2,
+  galBackstage: imagen21,
+  // Nuevas imágenes para Sobre Gales - Instantes
+  instante1: imagen8,
+  instante2: imagen12,
+  instante3: imagen11,
+  instante4: imagen19,
 };
 
 /** Datos de contacto provisionales: sustituir por los reales. */
@@ -40,12 +57,12 @@ export const navLinks = [
   { to: "/", label: "Inicio" },
   { to: "/sobre-gales", label: "Sobre Gales" },
   { to: "/espectaculos", label: "Espectáculos" },
-  { to: "/videos", label: "Vídeos" },
+  { to: "/videos", label: "Multimedia" },
   { to: "/galeria", label: "Galería" },
   { to: "/contacto", label: "Contacto" },
 ] as const;
 
-export const videoCategories = ["Empresas", "Bodas", "Teatros", "Close Up", "TV"] as const;
+export const videoCategories = ["Empresas", "Bodas", "Teatros", "Close Up", "Plato de Televisión"] as const;
 export const photoCategories = ["Escenario", "Close Up", "Empresas", "Bodas", "Público"] as const;
 export const galleryCategories = photoCategories;
 
@@ -68,7 +85,7 @@ export const demoVideos: DemoVideo[] = [
     description: "Una gran ilusión de escenario ante 1.800 personas, con producción completa.",
     duration: "04:12",
     location: "Madrid",
-    thumbnail_url: showreelCover,
+    thumbnail_url: imagen20,
     video_url: "",
   },
   {
@@ -78,7 +95,7 @@ export const demoVideos: DemoVideo[] = [
     description: "Apertura de convención con la marca del cliente integrada en la magia.",
     duration: "02:48",
     location: "Barcelona",
-    thumbnail_url: expEmpresas,
+    thumbnail_url: imagen16,
     video_url: "",
   },
   {
@@ -88,7 +105,7 @@ export const demoVideos: DemoVideo[] = [
     description: "Magia de cerca entre los invitados durante la recepción.",
     duration: "03:20",
     location: "Sevilla",
-    thumbnail_url: expPrivados,
+    thumbnail_url: imagen2,
     video_url: "",
   },
   {
@@ -98,39 +115,39 @@ export const demoVideos: DemoVideo[] = [
     description: "Las manos, las cartas y nada más. Imposible a diez centímetros.",
     duration: "01:55",
     location: "Valencia",
-    thumbnail_url: closeupHands,
+    thumbnail_url: imagen3,
     video_url: "",
   },
   {
     id: "demo-5",
     title: "Plató de televisión",
-    category: "TV",
+    category: "Plato de Televisión",
     description: "Intervención en directo para un programa de máxima audiencia.",
     duration: "05:02",
     location: "Madrid",
-    thumbnail_url: galEscenario,
-    video_url: "",
-  },
-  {
-    id: "demo-6",
-    title: "Teatro Gran Vía",
-    category: "Teatros",
-    description: "Fragmento del espectáculo completo, con público en pie.",
-    duration: "06:30",
-    location: "Madrid",
-    thumbnail_url: expTeatros,
+    thumbnail_url: imagen4,
     video_url: "",
   },
 ];
 
 export const demoPhotos = [
-  { id: "p1", title: "Aparición imposible", category: "Escenario", image_url: galEscenario },
-  { id: "p2", title: "El público", category: "Público", image_url: galPublico },
-  { id: "p3", title: "A un palmo", category: "Close Up", image_url: closeupHands },
-  { id: "p4", title: "Sí, quiero magia", category: "Bodas", image_url: galBodas },
-  { id: "p5", title: "Gala corporativa", category: "Empresas", image_url: expEmpresas },
-  { id: "p6", title: "Antes de salir", category: "Escenario", image_url: galBackstage },
-  { id: "p7", title: "Gran teatro", category: "Escenario", image_url: expTeatros },
-  { id: "p8", title: "Sobremesa mágica", category: "Bodas", image_url: expPrivados },
-  { id: "p9", title: "Retrato", category: "Escenario", image_url: aboutGalesAsset.url },
+  // ESCENARIO (imagen_6 a imagen_20 — 15 imágenes)
+  { id: "g1", title: "Escenario 1", category: "Escenario", image_url: imagen6 },
+  { id: "g2", title: "Escenario 2", category: "Escenario", image_url: imagen7 },
+  { id: "g3", title: "Escenario 3", category: "Escenario", image_url: imagen8 },
+  { id: "g4", title: "Escenario 4", category: "Escenario", image_url: imagen9 },
+  { id: "g5", title: "Escenario 5", category: "Escenario", image_url: imagen10 },
+  { id: "g6", title: "Escenario 6", category: "Escenario", image_url: imagen11 },
+  { id: "g7", title: "Escenario 7", category: "Escenario", image_url: imagen12 },
+  { id: "g8", title: "Escenario 8", category: "Escenario", image_url: imagen13 },
+  { id: "g9", title: "Escenario 9", category: "Escenario", image_url: imagen14 },
+  { id: "g10", title: "Escenario 10", category: "Escenario", image_url: imagen15 },
+  { id: "g11", title: "Escenario 11", category: "Escenario", image_url: imagen16 },
+  { id: "g12", title: "Escenario 12", category: "Escenario", image_url: imagen17 },
+  { id: "g13", title: "Escenario 13", category: "Escenario", image_url: imagen18 },
+  { id: "g14", title: "Escenario 14", category: "Escenario", image_url: imagen19 },
+  { id: "g15", title: "Escenario 15", category: "Escenario", image_url: imagen20 },
+  // EMPRESAS (imagen_1, imagen_2)
+  { id: "g16", title: "Evento corporativo 1", category: "Empresas", image_url: imagen1 },
+  { id: "g17", title: "Evento corporativo 2", category: "Empresas", image_url: imagen2 },
 ];

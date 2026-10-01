@@ -70,30 +70,40 @@ function Galeria() {
           </div>
 
           <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4">
-            {filtered.map((p, i) => (
-              <Reveal key={p.id} delay={Math.min(i, 6) * 0.04}>
-                <button
-                  type="button"
-                  onClick={() => setOpen(p.image_url)}
-                  onContextMenu={(e) => e.preventDefault()}
-                  className="group relative block w-full overflow-hidden border border-border"
-                >
-                  <img
-                    src={p.image_url}
-                    alt={p.title}
-                    loading="lazy"
-                    draggable={false}
-                    className="no-save w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <span className="absolute inset-0 flex items-end bg-gradient-to-t from-background/90 to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <span className="text-left">
-                      <span className="eyebrow block text-primary">{p.category}</span>
-                      <span className="mt-1 block font-display text-2xl text-white">{p.title}</span>
+            {filtered.length > 0 ? (
+              filtered.map((p, i) => (
+                <Reveal key={p.id} delay={Math.min(i, 6) * 0.04}>
+                  <button
+                    type="button"
+                    onClick={() => setOpen(p.image_url)}
+                    onContextMenu={(e) => e.preventDefault()}
+                    className="group relative block w-full overflow-hidden border border-border"
+                  >
+                    <img
+                      src={p.image_url}
+                      alt={p.title}
+                      loading="lazy"
+                      draggable={false}
+                      className="no-save w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <span className="absolute inset-0 flex items-end bg-gradient-to-t from-background/90 to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <span className="text-left">
+                        <span className="eyebrow block text-primary">{p.category}</span>
+                        <span className="mt-1 block font-display text-2xl text-white">{p.title}</span>
+                      </span>
                     </span>
-                  </span>
-                </button>
+                  </button>
+                </Reveal>
+              ))
+            ) : (
+              <Reveal className="col-span-full flex flex-col items-center justify-center gap-6 py-24">
+                <span className="eyebrow text-primary">Galería</span>
+                <h2 className="font-display text-4xl text-white">Próximamente</h2>
+                <p className="text-center text-muted-foreground max-w-md">
+                  Estamos recopilando los mejores momentos de esta categoría. Vuelve pronto.
+                </p>
               </Reveal>
-            ))}
+            )}
           </div>
         </div>
       </section>
