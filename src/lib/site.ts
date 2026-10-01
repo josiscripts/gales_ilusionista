@@ -1,6 +1,7 @@
 import heroGales from "@/assets/hero-gales.png";
 import imagen1 from "@/assets/imagen_1.jpeg";
 import imagen2 from "@/assets/imagen_2.jpeg";
+import imagen3 from "@/assets/imagen_3.jpeg";
 import imagen4 from "@/assets/imagen_4.jpeg";
 import imagen6 from "@/assets/imagen_6.jpeg";
 import imagen7 from "@/assets/imagen_7.jpeg";
@@ -31,7 +32,8 @@ export const images = {
   expPrivados: imagen2,
   expTeatros: imagen6,
   stageCta: stageCta,
-  showreelCover: showreelCover,
+  showreelCover: imagen20,
+  closeupHands,
   galPublico: imagen2,
   galEscenario: imagen8,
   galBodas: imagen2,
@@ -43,13 +45,12 @@ export const images = {
   instante4: imagen19,
 };
 
-/** Datos de contacto provisionales: sustituir por los reales. */
 export const contact = {
-  phoneDisplay: "+34 600 000 000",
-  whatsapp: "https://wa.me/34600000000",
-  email: "hola@galesilusionista.com",
-  instagram: "https://instagram.com/galesilusionista",
-  instagramHandle: "@galesilusionista",
+  phoneDisplay: "+34 605 22 81 33",
+  whatsapp: "https://wa.me/34605228133",
+  email: "info@galesilusionista.com",
+  instagram: "https://www.instagram.com/gales_ilusionista",
+  instagramHandle: "@gales_ilusionista",
   city: "Madrid, España",
 };
 
@@ -115,7 +116,7 @@ export const demoVideos: DemoVideo[] = [
     description: "Las manos, las cartas y nada más. Imposible a diez centímetros.",
     duration: "01:55",
     location: "Valencia",
-    thumbnail_url: closeupHands,
+    thumbnail_url: imagen3,
     video_url: "",
   },
   {

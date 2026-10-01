@@ -153,14 +153,6 @@ function Contacto() {
               </p>
             </div>
 
-            <div className="mt-6 overflow-hidden border border-border">
-              <iframe
-                title="Ubicación"
-                src="https://www.google.com/maps?q=Madrid,Espa%C3%B1a&output=embed"
-                loading="lazy"
-                className="h-72 w-full grayscale invert-[0.92] hue-rotate-180"
-              />
-            </div>
           </Reveal>
         </div>
       </section>
