@@ -1,7 +1,6 @@
 import heroGalesAsset from "@/assets/hero-gales.png.asset.json";
 import imagen1 from "@/assets/imagen_1.jpeg";
 import imagen2 from "@/assets/imagen_2.jpeg";
-import imagen3 from "@/assets/imagen_3.jpeg";
 import imagen4 from "@/assets/imagen_4.jpeg";
 import imagen6 from "@/assets/imagen_6.jpeg";
 import imagen7 from "@/assets/imagen_7.jpeg";
@@ -20,9 +19,10 @@ import imagen19 from "@/assets/imagen_19.jpeg";
 import imagen20 from "@/assets/imagen_20.jpeg";
 import imagen21 from "@/assets/imagen_21.jpeg";
 
-// Legacy imports - mantener para compatibilidad si es necesario
+// Legacy imports - mantener para compatibilidad
 import stageCta from "@/assets/stage-cta.jpg";
 import showreelCover from "@/assets/showreel-cover.jpg";
+import closeupHands from "@/assets/closeup-hands.jpg";
 
 export const images = {
   heroGales: heroGalesAsset.url,
@@ -115,7 +115,7 @@ export const demoVideos: DemoVideo[] = [
     description: "Las manos, las cartas y nada más. Imposible a diez centímetros.",
     duration: "01:55",
     location: "Valencia",
-    thumbnail_url: imagen3,
+    thumbnail_url: closeupHands,
     video_url: "",
   },
   {
