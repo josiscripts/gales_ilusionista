@@ -1,10 +1,12 @@
 "use client";
 
-import { MessageCircle, Ticket, Calendar, Sparkles, MessageSquare, X } from "lucide-react";
+import { Ticket, Calendar, Sparkles, MessageSquare, X } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
+import { Logo } from "./Logo";
 import { contact } from "@/lib/site";
+import whatsappSvg from "@/assets/whatsapp-svgrepo-com.svg";
 
 const contactOptions = [
   {
@@ -44,7 +46,7 @@ function getIcon(id: string) {
     case "message":
       return <MessageSquare className="h-5 w-5 shrink-0" />;
     default:
-      return <MessageCircle className="h-5 w-5 shrink-0" />;
+      return <Ticket className="h-5 w-5 shrink-0" />;
   }
 }
 
@@ -91,13 +93,13 @@ export function WhatsAppButton() {
         whileHover={{ y: -2 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setOpen(!open)}
-        className="fixed right-6 bottom-6 z-40 flex items-center justify-center gap-2.5 px-4 py-3 bg-white border-2 border-[#25D366] text-[#25D366] rounded-md transition-all duration-200 hover:shadow-lg"
+        className="fixed right-6 bottom-6 z-40 flex items-center justify-center gap-2.5 px-4 py-3 bg-white text-[#25D366] rounded-md transition-all duration-200 hover:shadow-lg"
         style={{
           clipPath: "polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px)",
         }}
         aria-label="Abrir contacto de WhatsApp"
       >
-        <MessageCircle className="h-5 w-5" />
+        <img src={whatsappSvg} alt="WhatsApp" className="h-5 w-5" />
         <span className="text-xs font-semibold tracking-wider uppercase hidden sm:inline">WhatsApp</span>
         <span className="text-xs font-semibold">→</span>
       </motion.button>
@@ -120,15 +122,15 @@ export function WhatsAppButton() {
             }}
           >
             {/* CONTENEDOR DEL PANEL */}
-            <div className="bg-white border border-gray-200 rounded-lg shadow-xl p-6 space-y-5">
+            <div className="bg-white border border-gray-200 shadow-xl p-6 space-y-5" style={{ borderRadius: "24px" }}>
               {/* HEADER */}
               <div className="text-center">
-                <h3 className="font-display text-xl font-bold text-gray-900">GALES</h3>
-                <p className="text-xs text-gray-500 mt-1">Ilusionista · Disponible</p>
+                <Logo compact />
+                <p className="text-xs text-gray-500 mt-2">Ilusionista · Disponible</p>
               </div>
 
               {/* MENSAJE */}
-              <div className="text-center space-y-2">
+              <div className="text-center space-y-2 border-t border-gray-200 pt-5">
                 <p className="text-sm leading-relaxed text-gray-700">
                   Hola<br />
                   ¿Quieres llevar la magia a tu próximo evento?<br />
@@ -138,7 +140,7 @@ export function WhatsAppButton() {
               </div>
 
               {/* OPCIONES */}
-              <div className="space-y-2 border-t border-gray-200 pt-5">
+              <div className="space-y-2">
                 {contactOptions.map((option) => (
                   <motion.button
                     key={option.id}
