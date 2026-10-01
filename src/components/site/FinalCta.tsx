@@ -20,12 +20,14 @@ export function FinalCta() {
         <h2 className="mt-6 font-display text-5xl leading-[1.02] text-white sm:text-7xl">
           ¿Estás listo para vivir lo imposible?
         </h2>
-        <Link
-          to="/contacto"
+        <a
+          href="https://wa.me/34605228133?text=Hola%20Gales%2C%20quiero%20reservar%20un%20espect%C3%A1culo.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20disponibilidad%20y%20opciones."
+          target="_blank"
+          rel="noreferrer"
           className="btn-red mt-10"
         >
           Reservar espectáculo
-        </Link>
+        </a>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
           <a
             href={contact.whatsapp}

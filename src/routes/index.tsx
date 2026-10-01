@@ -197,9 +197,9 @@ function Home() {
             transition={{ delay: 1.55, duration: 0.7, ease }}
             className="mx-auto mt-9 flex max-w-xs flex-col gap-4 sm:max-w-none sm:flex-row sm:justify-center"
           >
-            <Link to="/contacto" className="btn-red">
+            <a href="https://wa.me/34605228133?text=Hola%20Gales%2C%20quiero%20reservar%20un%20espect%C3%A1culo.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20disponibilidad%20y%20opciones." target="_blank" rel="noreferrer" className="btn-red">
               Reservar espectáculo
-            </Link>
+            </a>
             <a href="#showreel" className="btn-glass">
               <Play className="h-4 w-4 fill-current" /> Ver showreel
             </a>
