@@ -215,6 +215,49 @@
   font-weight: 500;
 }
 
+@utility btn-green {
+  --cut: 5px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.71rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: white;
+  background: #1f7a4d;
+  border: 1px solid #136941;
+  clip-path: polygon(var(--cut) 0, calc(100% - var(--cut)) 0, 100% var(--cut), 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, var(--cut) 100%, 0 calc(100% - var(--cut)), 0 var(--cut));
+  filter: drop-shadow(0 2px 8px color-mix(in oklab, #25D366 15%, transparent));
+  transition: transform 200ms ease, filter 200ms ease, background-color 200ms ease;
+  &::after {
+    content: "→";
+    font-size: 0.95rem;
+    letter-spacing: 0;
+    transition: transform 200ms ease;
+    margin-left: 0.25rem;
+  }
+  &:hover {
+    transform: translateY(-1px);
+    background: #228a57;
+    filter: drop-shadow(0 4px 12px color-mix(in oklab, #25D366 25%, transparent));
+  }
+  &:hover::after {
+    transform: translateX(2px);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
 @utility btn-glass {
   --cut: 12px;
   display: inline-flex;

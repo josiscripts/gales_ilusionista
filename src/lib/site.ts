@@ -1,4 +1,4 @@
-import heroGalesAsset from "@/assets/hero-gales.png.asset.json";
+import heroGales from "@/assets/hero-gales.png";
 import imagen1 from "@/assets/imagen_1.jpeg";
 import imagen2 from "@/assets/imagen_2.jpeg";
 import imagen4 from "@/assets/imagen_4.jpeg";
@@ -25,7 +25,7 @@ import showreelCover from "@/assets/showreel-cover.jpg";
 import closeupHands from "@/assets/closeup-hands.jpg";
 
 export const images = {
-  heroGales: heroGalesAsset.url,
+  heroGales,
   aboutGales: imagen21,
   expEmpresas: imagen7,
   expPrivados: imagen2,
